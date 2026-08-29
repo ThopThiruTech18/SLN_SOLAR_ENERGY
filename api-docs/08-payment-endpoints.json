@@ -1,0 +1,253 @@
+{
+  "baseUrl": "http://localhost:8080/api/payments",
+  "endpoints": [
+    {
+      "id": "PAYMENT_001",
+      "name": "Create Payment",
+      "method": "POST",
+      "endpoint": "/api/payments",
+      "description": "Record a new payment from a student for a course.",
+      "request": {
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "studentId": {
+              "type": "integer",
+              "example": 10,
+              "required": true
+            },
+            "courseId": {
+              "type": "integer",
+              "example": 1,
+              "required": true
+            },
+            "amountPaid": {
+              "type": "number",
+              "format": "decimal",
+              "example": 5000.00,
+              "required": true
+            },
+            "paymentDate": {
+              "type": "string",
+              "format": "date",
+              "example": "2024-02-01",
+              "required": false
+            },
+            "paymentMode": {
+              "type": "string",
+              "enum": ["CASH", "CHEQUE", "UPI", "NET_BANKING", "CREDIT_CARD", "DEBIT_CARD"],
+              "example": "UPI",
+              "required": false
+            },
+            "status": {
+              "type": "string",
+              "enum": ["PENDING", "COMPLETED", "FAILED", "REFUNDED"],
+              "example": "COMPLETED",
+              "required": false
+            }
+          }
+        },
+        "example": {
+          "studentId": 10,
+          "courseId": 1,
+          "amountPaid": 5000.00,
+          "paymentDate": "2024-02-01",
+          "paymentMode": "UPI",
+          "status": "COMPLETED"
+        }
+      },
+      "response": {
+        "statusCode": 201,
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "paymentId": {
+              "type": "integer"
+            },
+            "studentName": {
+              "type": "string"
+            },
+            "courseName": {
+              "type": "string"
+            },
+            "amountPaid": {
+              "type": "number"
+            },
+            "paymentDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "paymentMode": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            }
+          }
+        },
+        "example": {
+          "paymentId": 50,
+          "studentName": "Raj Kumar",
+          "courseName": "Advanced Java Programming",
+          "amountPaid": 5000.00,
+          "paymentDate": "2024-02-01",
+          "paymentMode": "UPI",
+          "status": "COMPLETED"
+        }
+      }
+    },
+    {
+      "id": "PAYMENT_002",
+      "name": "Update Payment",
+      "method": "PUT",
+      "endpoint": "/api/payments/{id}",
+      "description": "Update an existing payment record.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Payment ID"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "studentId": {
+              "type": "integer"
+            },
+            "courseId": {
+              "type": "integer"
+            },
+            "amountPaid": {
+              "type": "number"
+            },
+            "paymentDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "paymentMode": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json"
+      }
+    },
+    {
+      "id": "PAYMENT_003",
+      "name": "Get Payment by ID",
+      "method": "GET",
+      "endpoint": "/api/payments/{id}",
+      "description": "Retrieve details of a specific payment.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Payment ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json"
+      }
+    },
+    {
+      "id": "PAYMENT_004",
+      "name": "Get All Payments",
+      "method": "GET",
+      "endpoint": "/api/payments",
+      "description": "Retrieve list of all payments.",
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "id": "PAYMENT_005",
+      "name": "Get Payments by Student",
+      "method": "GET",
+      "endpoint": "/api/payments/student/{studentId}",
+      "description": "Retrieve all payments made by a specific student.",
+      "pathParameters": [
+        {
+          "name": "studentId",
+          "type": "integer",
+          "required": true,
+          "description": "Student ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "id": "PAYMENT_006",
+      "name": "Get Total Revenue",
+      "method": "GET",
+      "endpoint": "/api/payments/revenue",
+      "description": "Get total revenue from all payments.",
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "example": 150000.00
+      }
+    },
+    {
+      "id": "PAYMENT_007",
+      "name": "Delete Payment",
+      "method": "DELETE",
+      "endpoint": "/api/payments/{id}",
+      "description": "Delete a payment record.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Payment ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 204,
+        "description": "No content - Payment deleted successfully"
+      }
+    }
+  ]
+}

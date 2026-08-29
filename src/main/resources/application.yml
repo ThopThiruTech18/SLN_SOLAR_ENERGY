@@ -1,0 +1,63 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+spring:
+  application:
+    name: InstituteManagementProject
+  datasource:
+    url: jdbc:mysql://localhost:3306/myinstitutedb
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 20000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: never
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 100MB
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: thopthirutech@gmail.com
+    password: trnp vozj xuuf etrh
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            trust: smtp.gmail.com
+server:
+  servlet:
+    context-path: /
+  port: 8080
+logging:
+  level:
+    in:
+      thirutech:
+        institute: DEBUG
+    org:
+      springframework:
+        web: INFO
+      hibernate:
+        SQL: DEBUG
+app:
+  upload:
+    dir: uploads/notes

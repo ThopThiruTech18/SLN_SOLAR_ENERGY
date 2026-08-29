@@ -1,0 +1,41 @@
+📌 Students: /api/students
+   - POST   /           → Create student
+   - PUT    /{id}       → Update student
+   - GET    /{id}       → Get by ID
+   - GET    /           → Get all students
+   - GET    /active     → Get active students
+   - DELETE /{id}       → Delete student
+
+📌 Courses: /api/courses
+   - POST   /           → Create course
+   - PUT    /{id}       → Update course
+   - GET    /{id}       → Get by ID
+   - GET    /           → Get all courses
+   - GET    /active     → Get active courses
+   - DELETE /{id}       → Delete course
+
+📌 Trainers: /api/trainers
+   - POST   /           → Create trainer
+   - PUT    /{id}       → Update trainer
+   - GET    /{id}       → Get by ID
+   - GET    /           → Get all trainers
+   - DELETE /{id}       → Delete trainer
+
+📌 Batches: /api/batches
+   - POST   /           → Create batch
+   - PUT    /{id}       → Update batch
+   - GET    /{id}       → Get by ID
+   - GET    /           → Get all batches
+   - GET    /ongoing    → Get ongoing batches
+   - POST   /enroll     → Enroll student in batch
+   - DELETE /{id}       → Delete batch
+
+📌 Payments: /api/payments
+   - POST   /               → Create payment
+   - GET    /{id}           → Get by ID
+   - GET    /               → Get all payments
+   - GET    /student/{id}   → Get by student
+   - GET    /revenue        → Get total revenue
+
+📌 Dashboard: /api/dashboard
+   - GET    /stats          → Get dashboard statistics

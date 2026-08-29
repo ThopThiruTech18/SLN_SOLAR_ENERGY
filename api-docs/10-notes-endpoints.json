@@ -1,0 +1,192 @@
+{
+  "baseUrl": "http://localhost:8080/api/notes",
+  "endpoints": [
+    {
+      "id": "NOTES_001",
+      "name": "Upload Note/Course Material",
+      "method": "POST",
+      "endpoint": "/api/notes/upload",
+      "description": "Upload course material/notes as a file with optional course association.",
+      "request": {
+        "contentType": "multipart/form-data",
+        "parameters": [
+          {
+            "name": "file",
+            "type": "file",
+            "required": true,
+            "description": "The file to upload (PDF, DOC, DOCX, etc.)"
+          },
+          {
+            "name": "courseId",
+            "type": "integer",
+            "required": false,
+            "description": "Optional ID of the course to associate with this material"
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "required": false,
+            "description": "Optional title for the material. Defaults to filename if not provided"
+          }
+        ],
+        "example": {
+          "file": "[binary file content]",
+          "courseId": 1,
+          "title": "Java Basics - Chapter 1"
+        }
+      },
+      "response": {
+        "statusCode": 201,
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "materialId": {
+              "type": "integer"
+            },
+            "fileName": {
+              "type": "string"
+            },
+            "uploadedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "courseId": {
+              "type": "integer"
+            }
+          }
+        },
+        "example": {
+          "materialId": 1,
+          "fileName": "Java Basics - Chapter 1",
+          "uploadedAt": "2024-02-01T10:30:00",
+          "courseId": 1
+        }
+      },
+      "errors": [
+        {
+          "statusCode": 400,
+          "description": "File is empty"
+        },
+        {
+          "statusCode": 500,
+          "description": "Failed to upload file"
+        }
+      ]
+    },
+    {
+      "id": "NOTES_002",
+      "name": "Get All Notes",
+      "method": "GET",
+      "endpoint": "/api/notes",
+      "description": "Retrieve all course materials/notes, optionally filtered by courseId.",
+      "queryParameters": [
+        {
+          "name": "courseId",
+          "type": "integer",
+          "required": false,
+          "description": "Optional course ID to filter materials"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "example": [
+          {
+            "materialId": 1,
+            "fileName": "Java Basics - Chapter 1",
+            "uploadedAt": "2024-02-01T10:30:00",
+            "courseId": 1,
+            "courseName": "Advanced Java Programming"
+          },
+          {
+            "materialId": 2,
+            "fileName": "Java OOP Concepts",
+            "uploadedAt": "2024-02-03T11:00:00",
+            "courseId": 1,
+            "courseName": "Advanced Java Programming"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NOTES_003",
+      "name": "Get Notes by Course",
+      "method": "GET",
+      "endpoint": "/api/notes",
+      "description": "Retrieve course materials for a specific course using query parameter.",
+      "queryParameters": [
+        {
+          "name": "courseId",
+          "type": "integer",
+          "required": true,
+          "description": "Course ID to filter materials by"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "id": "NOTES_004",
+      "name": "Download Note",
+      "method": "GET",
+      "endpoint": "/api/notes/download/{materialId}",
+      "description": "Download a course material file.",
+      "pathParameters": [
+        {
+          "name": "materialId",
+          "type": "integer",
+          "required": true,
+          "description": "Material ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/octet-stream",
+        "description": "Returns the file as binary content"
+      }
+    },
+    {
+      "id": "NOTES_005",
+      "name": "Delete Note",
+      "method": "DELETE",
+      "endpoint": "/api/notes/{materialId}",
+      "description": "Delete a course material.",
+      "pathParameters": [
+        {
+          "name": "materialId",
+          "type": "integer",
+          "required": true,
+          "description": "Material ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 204,
+        "description": "No content - Note deleted successfully"
+      }
+    }
+  ]
+}

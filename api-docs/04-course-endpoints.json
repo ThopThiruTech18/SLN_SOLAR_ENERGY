@@ -1,0 +1,204 @@
+{
+  "baseUrl": "http://localhost:8080/api/courses",
+  "endpoints": [
+    {
+      "id": "COURSE_001",
+      "name": "Create Course",
+      "method": "POST",
+      "endpoint": "/api/courses",
+      "description": "Create a new course.",
+      "request": {
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "courseName": {
+              "type": "string",
+              "example": "Java Programming",
+              "required": true
+            },
+            "durationInMonths": {
+              "type": "integer",
+              "example": 3,
+              "required": true
+            },
+            "feeAmount": {
+              "type": "number",
+              "format": "decimal",
+              "example": 5000.00,
+              "required": true
+            },
+            "description": {
+              "type": "string",
+              "example": "Learn Java programming from basics to advanced",
+              "required": false
+            },
+            "status": {
+              "type": "boolean",
+              "example": true,
+              "required": false
+            }
+          }
+        },
+        "example": {
+          "courseName": "Advanced Java Programming",
+          "durationInMonths": 4,
+          "feeAmount": 8000.00,
+          "description": "Master Java programming with real-world projects",
+          "status": true
+        }
+      },
+      "response": {
+        "statusCode": 201,
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "courseId": {
+              "type": "integer"
+            },
+            "courseName": {
+              "type": "string"
+            },
+            "durationInMonths": {
+              "type": "integer"
+            },
+            "feeAmount": {
+              "type": "number"
+            },
+            "description": {
+              "type": "string"
+            },
+            "status": {
+              "type": "boolean"
+            }
+          }
+        },
+        "example": {
+          "courseId": 1,
+          "courseName": "Advanced Java Programming",
+          "durationInMonths": 4,
+          "feeAmount": 8000.00,
+          "description": "Master Java programming with real-world projects",
+          "status": true
+        }
+      }
+    },
+    {
+      "id": "COURSE_002",
+      "name": "Update Course",
+      "method": "PUT",
+      "endpoint": "/api/courses/{id}",
+      "description": "Update an existing course.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Course ID"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "body": {
+          "type": "object"
+        },
+        "example": {
+          "courseName": "Java Programming Basics",
+          "feeAmount": 5500.00,
+          "status": true
+        }
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json"
+      }
+    },
+    {
+      "id": "COURSE_003",
+      "name": "Get Course by ID",
+      "method": "GET",
+      "endpoint": "/api/courses/{id}",
+      "description": "Retrieve details of a specific course.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Course ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "example": {
+          "courseId": 1,
+          "courseName": "Advanced Java Programming",
+          "durationInMonths": 4,
+          "feeAmount": 8000.00,
+          "description": "Master Java programming with real-world projects",
+          "status": true
+        }
+      }
+    },
+    {
+      "id": "COURSE_004",
+      "name": "Get All Courses",
+      "method": "GET",
+      "endpoint": "/api/courses",
+      "description": "Retrieve list of all courses.",
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "id": "COURSE_005",
+      "name": "Get Active Courses",
+      "method": "GET",
+      "endpoint": "/api/courses/active",
+      "description": "Retrieve list of all active courses.",
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "id": "COURSE_006",
+      "name": "Delete Course",
+      "method": "DELETE",
+      "endpoint": "/api/courses/{id}",
+      "description": "Delete a course.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Course ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 204,
+        "description": "No content - Course deleted successfully"
+      }
+    }
+  ]
+}

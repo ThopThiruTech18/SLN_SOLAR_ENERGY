@@ -1,0 +1,215 @@
+{
+  "baseUrl": "http://localhost:8080/api/trainers",
+  "endpoints": [
+    {
+      "id": "TRAINER_001",
+      "name": "Create Trainer",
+      "method": "POST",
+      "endpoint": "/api/trainers",
+      "description": "Create a new trainer record linked to a user account.",
+      "request": {
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "integer",
+              "example": 20,
+              "required": true,
+              "description": "ID of the user account to link"
+            },
+            "expertise": {
+              "type": "string",
+              "example": "Java, Spring Boot, Microservices",
+              "required": false
+            },
+            "salary": {
+              "type": "number",
+              "format": "decimal",
+              "example": 50000.00,
+              "required": false
+            },
+            "joiningDate": {
+              "type": "string",
+              "format": "date",
+              "example": "2024-01-01",
+              "required": false
+            }
+          }
+        },
+        "example": {
+          "userId": 20,
+          "expertise": "Java, Spring Boot, Microservices",
+          "salary": 50000.00,
+          "joiningDate": "2024-01-01"
+        }
+      },
+      "response": {
+        "statusCode": 201,
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "trainerId": {
+              "type": "integer"
+            },
+            "userId": {
+              "type": "integer"
+            },
+            "fullName": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "expertise": {
+              "type": "string"
+            },
+            "status": {
+              "type": "boolean"
+            },
+            "salary": {
+              "type": "number"
+            },
+            "joiningDate": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        "example": {
+          "trainerId": 5,
+          "userId": 20,
+          "fullName": "Amit Sharma",
+          "email": "amit@thirutech.com",
+          "phone": "9876543210",
+          "expertise": "Java, Spring Boot, Microservices",
+          "status": true,
+          "salary": 50000.00,
+          "joiningDate": "2024-01-01"
+        }
+      }
+    },
+    {
+      "id": "TRAINER_002",
+      "name": "Update Trainer",
+      "method": "PUT",
+      "endpoint": "/api/trainers/{id}",
+      "description": "Update an existing trainer record.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Trainer ID"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "integer"
+            },
+            "expertise": {
+              "type": "string"
+            },
+            "salary": {
+              "type": "number"
+            },
+            "joiningDate": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json"
+      }
+    },
+    {
+      "id": "TRAINER_003",
+      "name": "Get Trainer by ID",
+      "method": "GET",
+      "endpoint": "/api/trainers/{id}",
+      "description": "Retrieve details of a specific trainer.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Trainer ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json"
+      }
+    },
+    {
+      "id": "TRAINER_004",
+      "name": "Get All Trainers",
+      "method": "GET",
+      "endpoint": "/api/trainers",
+      "description": "Retrieve list of all trainers.",
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "id": "TRAINER_005",
+      "name": "Get Active Trainers",
+      "method": "GET",
+      "endpoint": "/api/trainers/active",
+      "description": "Retrieve list of all active trainers.",
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "id": "TRAINER_006",
+      "name": "Delete Trainer",
+      "method": "DELETE",
+      "endpoint": "/api/trainers/{id}",
+      "description": "Delete a trainer record.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Trainer ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 204,
+        "description": "No content - Trainer deleted successfully"
+      }
+    }
+  ]
+}

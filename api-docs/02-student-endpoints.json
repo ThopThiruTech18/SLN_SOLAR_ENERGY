@@ -1,0 +1,280 @@
+{
+  "baseUrl": "http://localhost:8080/api/students",
+  "endpoints": [
+    {
+      "id": "STUDENT_001",
+      "name": "Create Student",
+      "method": "POST",
+      "endpoint": "/api/students",
+      "description": "Create a new student record linked to a user account.",
+      "request": {
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "integer",
+              "example": 1,
+              "required": true,
+              "description": "ID of the user account to link"
+            },
+            "phone": {
+              "type": "string",
+              "example": "9876543210",
+              "required": false
+            },
+            "address": {
+              "type": "string",
+              "example": "123 Main Street, City",
+              "required": false
+            },
+            "qualification": {
+              "type": "string",
+              "example": "B.Tech in Computer Science",
+              "required": false
+            },
+            "joiningDate": {
+              "type": "string",
+              "format": "date",
+              "example": "2024-01-15",
+              "required": false
+            },
+            "status": {
+              "type": "string",
+              "enum": ["ACTIVE", "INACTIVE", "SUSPENDED"],
+              "example": "ACTIVE",
+              "required": false
+            }
+          }
+        },
+        "example": {
+          "userId": 5,
+          "phone": "9876543210",
+          "address": "123 Main Street, Bangalore",
+          "qualification": "B.Tech in IT",
+          "joiningDate": "2024-01-15",
+          "status": "ACTIVE"
+        }
+      },
+      "response": {
+        "statusCode": 201,
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "studentId": {
+              "type": "integer"
+            },
+            "fullName": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "qualification": {
+              "type": "string"
+            },
+            "joiningDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "status": {
+              "type": "string"
+            }
+          }
+        },
+        "example": {
+          "studentId": 10,
+          "fullName": "Raj Kumar",
+          "email": "raj@thirutech.com",
+          "phone": "9876543210",
+          "address": "123 Main Street, Bangalore",
+          "qualification": "B.Tech in IT",
+          "joiningDate": "2024-01-15",
+          "status": "ACTIVE"
+        }
+      }
+    },
+    {
+      "id": "STUDENT_002",
+      "name": "Update Student",
+      "method": "PUT",
+      "endpoint": "/api/students/{id}",
+      "description": "Update an existing student record.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Student ID"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "body": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "integer"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "qualification": {
+              "type": "string"
+            },
+            "joiningDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["ACTIVE", "INACTIVE", "SUSPENDED"]
+            }
+          }
+        },
+        "example": {
+          "phone": "9876543211",
+          "address": "456 New Avenue, Bangalore",
+          "status": "ACTIVE"
+        }
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "example": {
+          "studentId": 10,
+          "fullName": "Raj Kumar",
+          "email": "raj@thirutech.com",
+          "phone": "9876543211",
+          "address": "456 New Avenue, Bangalore",
+          "qualification": "B.Tech in IT",
+          "joiningDate": "2024-01-15",
+          "status": "ACTIVE"
+        }
+      }
+    },
+    {
+      "id": "STUDENT_003",
+      "name": "Get Student by ID",
+      "method": "GET",
+      "endpoint": "/api/students/{id}",
+      "description": "Retrieve details of a specific student.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Student ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "example": {
+          "studentId": 10,
+          "fullName": "Raj Kumar",
+          "email": "raj@thirutech.com",
+          "phone": "9876543210",
+          "address": "123 Main Street, Bangalore",
+          "qualification": "B.Tech in IT",
+          "joiningDate": "2024-01-15",
+          "status": "ACTIVE"
+        }
+      }
+    },
+    {
+      "id": "STUDENT_004",
+      "name": "Get All Students",
+      "method": "GET",
+      "endpoint": "/api/students",
+      "description": "Retrieve list of all students.",
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "example": [
+          {
+            "studentId": 10,
+            "fullName": "Raj Kumar",
+            "email": "raj@thirutech.com",
+            "phone": "9876543210",
+            "address": "123 Main Street, Bangalore",
+            "qualification": "B.Tech in IT",
+            "joiningDate": "2024-01-15",
+            "status": "ACTIVE"
+          },
+          {
+            "studentId": 11,
+            "fullName": "Priya Singh",
+            "email": "priya@thirutech.com",
+            "phone": "9876543211",
+            "address": "456 Oak Road, Bangalore",
+            "qualification": "B.Sc in Maths",
+            "joiningDate": "2024-02-01",
+            "status": "ACTIVE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STUDENT_005",
+      "name": "Get Active Students",
+      "method": "GET",
+      "endpoint": "/api/students/active",
+      "description": "Retrieve list of all active students.",
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 200,
+        "contentType": "application/json",
+        "body": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "id": "STUDENT_006",
+      "name": "Delete Student",
+      "method": "DELETE",
+      "endpoint": "/api/students/{id}",
+      "description": "Delete a student record.",
+      "pathParameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": true,
+          "description": "Student ID"
+        }
+      ],
+      "request": {
+        "description": "No request body required"
+      },
+      "response": {
+        "statusCode": 204,
+        "description": "No content - Student deleted successfully"
+      }
+    }
+  ]
+}
