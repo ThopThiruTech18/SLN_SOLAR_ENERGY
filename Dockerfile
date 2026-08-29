@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ─── Stage 1: Build ──────────────────────────────────────────────────────────
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
@@ -25,7 +25,7 @@ RUN mkdir -p uploads/notes
 EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=prod", "app.jar"]
-=======
+
 FROM node:22-alpine
 
 WORKDIR /app
