@@ -101,3 +101,22 @@ document.querySelector('#quote-form')?.addEventListener('submit', async (event) 
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+// FAQ Accordion functionality
+document.querySelectorAll('.faq-toggle').forEach((toggle) => {
+  toggle.addEventListener('click', () => {
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    const content = toggle.nextElementSibling;
+    
+    toggle.setAttribute('aria-expanded', String(!isExpanded));
+    content.hidden = isExpanded;
+    
+    // Close other open FAQs
+    document.querySelectorAll('.faq-toggle').forEach((otherToggle) => {
+      if (otherToggle !== toggle) {
+        otherToggle.setAttribute('aria-expanded', 'false');
+        otherToggle.nextElementSibling.hidden = true;
+      }
+    });
+  });
+});
