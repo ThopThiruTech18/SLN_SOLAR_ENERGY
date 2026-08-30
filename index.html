@@ -1,233 +1,471 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SLN Solar Energy delivers dependable solar solutions for homes, businesses, farms and large-scale projects across Andhra Pradesh.">
-  <title>SLN Solar Energy | Powering Homes with Divine Energy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLN Solar - Reliable Solar Energy Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="nav-shell">
-      <a class="brand" href="#top" aria-label="SLN Solar Energy home">
-        <img src="assets/logo.png" alt="SLN Solar Energy Logo" class="brand-logo">
-        <span class="brand-mark">SLN</span>
-        <span><strong>SLN SOLAR</strong><small>ENERGY</small></span>
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
-      <nav id="main-nav" class="main-nav">
-        <a href="#top">Home</a>
-        <a href="#career">Career</a>
-        <a href="#service">Service</a>
-        <a href="#reviews">Review</a>
-        <a href="#service">Solutions</a>
-        <a href="#process">How it works</a>
-        <a href="#projects">Projects</a>
-        <a href="#pm-surya-ghar">PM Surya Ghar</a>
-        <button class="nav-cta quote-trigger">Get a free quote <span>↗</span></button>
-      </nav>
-    </div>
-  </header>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logo.png" alt="SLN Solar Energy" class="site-logo">
+                    </a>
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    
+                    <!-- Pages Dropdown -->
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="about.html">About Us</a>
+                            <a href="how-it-works.html">How It Works</a>
+                            <a href="faq.html">FAQ</a>
+                            <a href="testimonials.html">Testimonials</a>
+                        </div>
+                    </div>
 
-  <main>
-    <section class="hero section-pad">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span></span> Clean power. Clear future.</p>
-        <h1>Power your future <em>with solar energy.</em></h1>
-        <p class="hero-intro">Smart solar solutions for homes, businesses and agriculture, designed around the way you use power.</p>
-        <div class="hero-actions">
-          <button class="button button-dark quote-trigger">Get free quote <span>↗</span></button>
-          <a class="phone-link" href="tel:8309323693"><span class="phone-icon">⌕</span> 83093 23693</a>
+                    <!-- Services Dropdown -->
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="services.html?type=residential">Residential Solar</a>
+                            <a href="services.html?type=commercial">Commercial Solar</a>
+                            <a href="services.html?type=industrial">Industrial Solar</a>
+                            <a href="services.html?type=water-heaters">Solar Water Heaters</a>
+                            <a href="services.html?type=pumps">Solar Water Pumps</a>
+                            <a href="services.html?type=street-lights">Solar Street Lights</a>
+                            <a href="services.html?type=fencing">Solar Fencing</a>
+                        </div>
+                    </div>
+
+                    <!-- Products Dropdown -->
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Products <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html?brand=tata">Tata Solar Panels</a>
+                            <a href="products.html?brand=waree">Waree Energies</a>
+                            <a href="products.html?brand=renewsys">RenewSys Solar</a>
+                            <a href="products.html?brand=adani">Adani Solar</a>
+                            <a href="products.html?type=inverters">Inverters</a>
+                            <a href="products.html?type=batteries">Solar Batteries</a>
+                        </div>
+                    </div>
+
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    
+                    <a href="contact.html" class="nav-link btn-primary">Get Free Quote</a>
+                </nav>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-        <div class="hero-note"><span class="live-dot"></span> Site survey to after-sales support, all in one place.</div>
-      </div>
-      <div class="hero-visual reveal">
-        <div class="hero-image-wrap" id="solar-carousel" tabindex="0" aria-label="Solar project image carousel">
-          <div class="hero-slides">
-            <img class="hero-slide active" src="assets/kuruvanagalapuram-rooftop.jpeg" alt="SLN Solar rooftop installation in Kuruva Nagalapuram" data-title="Kuruva Nagalapuram rooftop">
-            <img class="hero-slide" src="assets/ananthapur-rooftop.jpeg" alt="SLN Solar rooftop installation in Ananthapur" data-title="Ananthapur rooftop">
-            <img class="hero-slide" src="assets/solax-inverter.jpeg" alt="Solax solar inverter installation" data-title="Solax inverter system">
-            <img class="hero-slide" src="assets/waaree-inverter.jpeg" alt="Waaree solar inverter installation" data-title="Waaree inverter system">
-          </div>
-          <div class="carousel-controls" aria-label="Carousel controls">
-            <button class="carousel-arrow carousel-prev" type="button" aria-label="Previous solar image">←</button>
-            <div class="carousel-dots"></div>
-            <button class="carousel-arrow carousel-next" type="button" aria-label="Next solar image">→</button>
-          </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80');"></div>
         </div>
-        <div class="energy-badge"><strong>25<span>+</span></strong><small>years of<br>clean energy</small></div>
-        <div class="hero-caption"><span class="carousel-count">01 / 05</span><strong class="carousel-title">Residential rooftops</strong><span>↗</span></div>
-      </div>
+        <div class="container hero-layout">
+            <div class="hero-content">
+                <span class="eyebrow eyebrow-light">Trusted Solar Experts</span>
+                <h1>Bright Solar Solutions for a Smarter, Greener Future</h1>
+                <p class="hero-subtitle">Power your home, business, and community with clean solar energy. We help families and companies reduce electricity bills, save more, and switch to reliable renewable power.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary">Book a Free Site Visit</a>
+                    <a href="#features" class="btn btn-outline">Explore Solutions</a>
+                </div>
+                <div class="hero-trust-row">
+                    <span><i class="fas fa-check-circle"></i> 30-year panel warranty</span>
+                    <span><i class="fas fa-check-circle"></i> Fast installation</span>
+                    <span><i class="fas fa-check-circle"></i> Govt subsidy support</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-visual">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80" alt="Solar rooftop installation" />
+                    <div class="hero-badge">
+                        <strong>15,000+</strong>
+                        <span>homes powered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="service-strip">
-      <div class="strip-label">Built for your<br><strong>kind of power.</strong></div>
-      <a href="#service">Residential solar <span>↗</span></a>
-      <a href="#service">Commercial solar <span>↗</span></a>
-      <a href="#service">Industrial solar <span>↗</span></a>
-      <a href="#service">Agricultural solar <span>↗</span></a>
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card feature-art-1">
+                    <div class="feature-overlay">
+                        <h3>30 Years Panel Warranty</h3>
+                        <p>Industry-leading warranty for durability and reliability</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-art-2">
+                    <div class="feature-overlay">
+                        <h3>ECO Friendly</h3>
+                        <p>100% renewable energy for a sustainable future</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-art-3">
+                    <div class="feature-overlay">
+                        <h3>Long Term Savings</h3>
+                        <p>Save up to 80% on your electricity bills</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-art-4">
+                    <div class="feature-overlay">
+                        <h3>Fast Installation</h3>
+                        <p>Quick and professional installation process</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="about section-pad" id="about">
-      <div class="section-kicker">01 — The SLN difference</div>
-      <div class="about-grid">
-        <h2>Energy that works<br><em>for you.</em></h2>
-        <div class="about-copy"><p class="lead">SLN SOLAR ENERGY helps people move from conventional electricity to clean, reliable and cost-effective solar power.</p><p>From your first site survey to system design, installation, documentation, net-metering assistance and after-sales service, our team stays with you at every step.</p><a class="text-link" href="#process">See how we work <span>↗</span></a></div>
-      </div>
-      <div class="principles"><div><strong>01</strong><span>Local expertise</span><p>Rooted in Andhra Pradesh, ready for every kind of site.</p></div><div><strong>02</strong><span>End-to-end care</span><p>One team from the first conversation to long-term support.</p></div><div><strong>03</strong><span>Honest engineering</span><p>Right-sized systems, transparent recommendations, no guesswork.</p></div></div>
+    <section class="photo-strip">
+        <div class="container">
+            <div class="section-heading photo-heading">
+                <div>
+                    <span class="eyebrow">Our Solar Installations</span>
+                    <h2>Real projects. Real solar.</h2>
+                </div>
+                <div class="carousel-controls" aria-label="Solar project carousel controls">
+                    <button type="button" class="carousel-button" data-carousel-prev aria-label="Previous project"><i class="fas fa-arrow-left"></i></button>
+                    <button type="button" class="carousel-button" data-carousel-next aria-label="Next project"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="photo-carousel" data-carousel>
+                <div class="photo-track">
+                <div class="photo-card" style="background-image: url('assets/kuruvanagalapuram-rooftop.jpeg');">
+                    <div class="photo-overlay">
+                        <span>Residential Rooftop</span>
+                    </div>
+                </div>
+                <div class="photo-card" style="background-image: url('assets/ananthapur-rooftop.jpeg');">
+                    <div class="photo-overlay">
+                        <span>Ananthapur Installation</span>
+                    </div>
+                </div>
+                <div class="photo-card" style="background-image: url('assets/ananthapur-project.jpeg');">
+                    <div class="photo-overlay">
+                        <span>On-Grid Solar Project</span>
+                    </div>
+                </div>
+                <div class="photo-card" style="background-image: url('assets/kalluru-rooftop.jpeg');">
+                    <div class="photo-overlay">
+                        <span>Kalluru Rooftop</span>
+                    </div>
+                </div>
+                <div class="photo-card" style="background-image: url('assets/solax-inverter.jpeg');">
+                    <div class="photo-overlay">
+                        <span>Smart Inverter Setup</span>
+                    </div>
+                </div>
+                <div class="photo-card" style="background-image: url('assets/waaree-inverter.jpeg');">
+                    <div class="photo-overlay">
+                        <span>Waaree Energy System</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </section>
 
-    <section class="solutions section-pad" id="service">
-      <div class="section-heading"><div><div class="section-kicker">02 — What we power</div><h2>Solar solutions<br><em>with purpose.</em></h2></div><p>Whether it is a home, a growing business or open farmland, we design systems that make every unit count.</p></div>
-      <div class="solution-grid"><article class="solution-card featured"><div class="card-number">01</div><h3>Residential</h3><p>Independent houses, villas, apartments and residential buildings.</p><span class="capacity">1 kW — 10 kW+</span><div class="card-art art-roof"></div><a href="#contact" aria-label="Enquire about residential solar">↗</a></article><article class="solution-card"><div class="card-number">02</div><h3>Commercial</h3><p>Shops, offices, hotels, hospitals, schools and warehouses.</p><span class="capacity">10 kW — 500 kW+</span><div class="card-art art-business"></div><a href="#contact" aria-label="Enquire about commercial solar">↗</a></article><article class="solution-card dark-card"><div class="card-number">03</div><h3>Industrial</h3><p>Manufacturing units, factories and large facilities.</p><span class="capacity">100 kW — MW scale</span><div class="card-art art-industry"></div><a href="#contact" aria-label="Enquire about industrial solar">↗</a></article><article class="solution-card farm-card"><div class="card-number">04</div><h3>Agricultural</h3><p>Farms, solar pumps and ground-mounted projects.</p><span class="capacity">Site specific</span><div class="card-art art-farm"></div><a href="#contact" aria-label="Enquire about agricultural solar">↗</a></article></div>
+    <!-- Top Brands Section -->
+    <section class="brands">
+        <div class="container">
+            <h2>Top Selling Solar Panel Models</h2>
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <div class="brand-icon">TATA</div>
+                    <h4>Tata Solar</h4>
+                    <p>160 MW Monocrystalline PV Module</p>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-icon">WAREE</div>
+                    <h4>Waree Energies</h4>
+                    <p>Aditya Series WSD-325 To WSD-350</p>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-icon">RENEWSYS</div>
+                    <h4>RenewSys Solar</h4>
+                    <p>DESERV Extreme N-Type TOPCon 415-650Wp</p>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-icon">ADANI</div>
+                    <h4>Adani Solar</h4>
+                    <p>TOPCon & MonoPERC 535 To 660W</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="stats-section section-pad">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">25<span>+</span></div>
-          <p>Years of<br>Clean Energy</p>
+    <!-- Solutions Section -->
+    <section class="solutions">
+        <div class="container">
+            <h2>Our Solutions</h2>
+            <p class="section-subtitle">Tailored solar solutions for your needs</p>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Solar For Your Home</h3>
+                    <p>Reduce your energy bills while contributing to a sustainable future</p>
+                    <a href="services.html?type=residential">Learn More →</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Housing Societies</h3>
+                    <p>Customized rooftop solutions with government subsidies</p>
+                    <a href="services.html?type=commercial">Learn More →</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>For Your Business</h3>
+                    <p>Power your business with solar. Boost efficiency and sustainability</p>
+                    <a href="services.html?type=industrial">Learn More →</a>
+                </div>
+            </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">80<span>%</span></div>
-          <p>Electricity<br>Savings</p>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">30</div>
-          <p>Years Panel<br>Warranty</p>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">10</div>
-          <p>Years Inverter<br>Warranty</p>
-        </div>
-      </div>
     </section>
 
-    <section class="solar-types section-pad"><div class="section-kicker">03 — Find your fit</div><div class="type-layout"><h2>One sun.<br><em>Three ways.</em></h2><div class="type-list"><article><span>01</span><div><h3>On-grid solar</h3><p>Generate electricity through your solar panels and use your grid connection under applicable regulations.</p></div><b>↗</b></article><article><span>02</span><div><h3>Hybrid solar</h3><p>Solar + battery storage + grid, giving you flexibility when your energy needs change.</p></div><b>↗</b></article><article><span>03</span><div><h3>Off-grid solar</h3><p>Independent solar power with battery storage for locations that need energy autonomy.</p></div><b>↗</b></article></div></div></section>
-
-    <section class="financing section-pad">
-      <div class="section-heading"><div><div class="section-kicker">04 — Multiple financing options</div><h2>Make solar<br><em>affordable.</em></h2></div><p>Choose from flexible financing options that work with your budget. Let the sun pay your costs.</p></div>
-      <div class="financing-grid">
-        <div class="finance-card">
-          <div class="finance-badge">Popular</div>
-          <h3>Easy Financing</h3>
-          <p class="finance-amount">₹10 kW / ₹2,35,099</p>
-          <ul>
-            <li>✓ Hassle-Free Process</li>
-            <li>✓ Fast Application Approvals</li>
-            <li>✓ High Quality Panels</li>
-            <li>✓ Net-Metering Assistance</li>
-          </ul>
-          <button class="button button-dark quote-trigger">Get free quote <span>↗</span></button>
+    <!-- Financing Options Section -->
+    <section class="financing">
+        <div class="container">
+            <h2>Multiple Financing Options</h2>
+            <p class="section-subtitle">Choose what works best for your budget</p>
+            <div class="financing-grid">
+                <div class="financing-card">
+                    <h3>₹10kW / 235,099 KWH</h3>
+                    <h4>Easy Financing</h4>
+                    <ul>
+                        <li>Hassle-Free Process</li>
+                        <li>Fast Application Approvals</li>
+                        <li>High Quality & Efficient Panels</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Secure Your Deal</a>
+                </div>
+                <div class="financing-card highlighted">
+                    <h3>₹3500 / PER MONTH</h3>
+                    <h4>EMI Plan</h4>
+                    <ul>
+                        <li>0% Mark-Up Rate</li>
+                        <li>Let the Sun pay your EMIs</li>
+                        <li>Systems up to 200 MW</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Secure Your Deal</a>
+                </div>
+                <div class="financing-card">
+                    <h3>Government Subsidy</h3>
+                    <h4>PM Surya Ghar</h4>
+                    <ul>
+                        <li>₹78,000 Subsidy Available</li>
+                        <li>Easy Application</li>
+                        <li>Government Backed</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
         </div>
-        <div class="finance-card featured-finance">
-          <div class="finance-badge">Best Savings</div>
-          <h3>EMI Plan</h3>
-          <p class="finance-amount">₹3,500 / <span>Per Month</span></p>
-          <ul>
-            <li>✓ 0% Mark-Up Rate</li>
-            <li>✓ Sun Pays Your EMIs</li>
-            <li>✓ Free Electricity After</li>
-            <li>✓ Up to 200 MW Capacity</li>
-          </ul>
-          <button class="button button-light quote-trigger">Secure your deal <span>↗</span></button>
-        </div>
-        <div class="finance-card">
-          <div class="finance-badge">Government Support</div>
-          <h3>Subsidy Scheme</h3>
-          <p class="finance-amount">PM Surya Ghar / ₹78,000</p>
-          <ul>
-            <li>✓ Government Subsidies</li>
-            <li>✓ Reduced Installation Cost</li>
-            <li>✓ Documentation Support</li>
-            <li>✓ Long-term Savings</li>
-          </ul>
-          <button class="button button-dark quote-trigger">Learn more <span>↗</span></button>
-        </div>
-      </div>
     </section>
 
-    <section class="process section-pad" id="process"><div class="process-intro"><div class="section-kicker">05 — From idea to impact</div><h2>Good solar starts<br>with a <em>good plan.</em></h2><p>Our process is designed to keep things clear, practical and moving.</p><button class="button button-light quote-trigger">Start a conversation <span>↗</span></button></div><div class="process-steps"><div><span>01</span><h3>Free consultation</h3><p>We understand your electricity needs.</p></div><div><span>02</span><h3>Bill analysis</h3><p>We study your consumption and size the system.</p></div><div><span>03</span><h3>Site survey</h3><p>We check the roof, shadows, structure and electricals.</p></div><div><span>04</span><h3>System design</h3><p>You receive a clear design and quotation.</p></div><div><span>05</span><h3>Documentation</h3><p>Project paperwork is prepared with care.</p></div><div><span>06</span><h3>Installation</h3><p>Panels, inverter, structure and protection equipment go in.</p></div><div><span>07</span><h3>Approvals</h3><p>Applicable inspection and approval steps are completed.</p></div><div><span>08</span><h3>Net metering</h3><p>We assist with the applicable net-metering process.</p></div><div><span>09</span><h3>Commissioning</h3><p>Your system is tested, connected and commissioned.</p></div><div><span>10</span><h3>After-sales care</h3><p>We stay available for technical support.</p></div></div></section>
-
-    <section class="products section-pad"><div class="section-heading"><div><div class="section-kicker">06 — Built to last</div><h2>Reliable parts.<br><em>Real performance.</em></h2></div><p>We specify quality components that work together as a complete system. Ask us for current brands, models, capacities, warranties and datasheets.</p></div><div class="product-list"><div><span>01</span><strong>Solar panels</strong><small>Brand · Model · Capacity · Warranty</small><b>↗</b></div><div><span>02</span><strong>Inverters</strong><small>On-grid · Hybrid · Off-grid</small><b>↗</b></div><div><span>03</span><strong>Batteries</strong><small>Storage · Backup · Warranty</small><b>↗</b></div><div><span>04</span><strong>Balance of system</strong><small>Structures · ACDB · DCDB</small><b>↗</b></div><div><span>05</span><strong>Protection & monitoring</strong><small>Earthing · Lightning · Cables</small><b>↗</b></div></div></section>
-
-    <section class="career section-pad" id="career"><div class="section-heading"><div><div class="section-kicker">07 — Grow with us</div><h2>Build the<br><em>clean future.</em></h2></div><p>We are looking for practical, curious people who want to make solar energy more accessible across Andhra Pradesh.</p></div><div class="career-row"><div><span>Open opportunity</span><strong>Solar installation technician</strong><small>Field work · Andhra Pradesh</small></div><a class="text-link" href="mailto:hello@slnsolarenergy.in?subject=Career%20enquiry">Send your profile <span>↗</span></a></div><div class="career-row"><div><span>Open opportunity</span><strong>Solar sales consultant</strong><small>Customer relationships · Andhra Pradesh</small></div><a class="text-link" href="mailto:hello@slnsolarenergy.in?subject=Career%20enquiry">Send your profile <span>↗</span></a></div></section>
-
-    <section class="projects section-pad" id="projects"><div class="section-heading light-heading"><div><div class="section-kicker">08 — Work in the real world</div><h2>Real projects.<br><em>Real solar.</em></h2></div><p>Actual SLN Solar installations across Andhra Pradesh, photographed on site.</p></div><div class="project-gallery"><article class="project-main"><img src="assets/kuruvanagalapuram-rooftop.jpeg" alt="Solar rooftop installation in Kuruva Nagalapuram"><div><span>Kuruva Nagalapuram</span><strong>Rooftop solar · Andhra Pradesh</strong><small>Completed installation</small></div></article><div class="project-side"><div class="project-tile"><img src="assets/kalluru-rooftop.jpeg" alt="Solar rooftop installation in Kalluru, Andhra Pradesh"><span>Kalluru rooftop ↗</span></div><div class="project-tile"><img src="assets/ananthapur-project.jpeg" alt="Solar panel installation in Ananthapur, Andhra Pradesh"><span>Ananthapur rooftop ↗</span></div></div></div></section>
-
-    <section class="reviews section-pad" id="reviews"><div class="section-heading"><div><div class="section-kicker">09 — Customer stories</div><h2>Power that earns<br><em>trust.</em></h2></div><p>Real experiences from customers who chose a cleaner, more independent way to power their lives.</p></div><div class="review-grid"><article><div class="stars">★★★★★</div><blockquote>“Excellent installation and good support from the SLN Solar Energy team.”</blockquote><strong>Residential customer</strong><small>Andhra Pradesh</small></article><article><div class="stars">★★★★★</div><blockquote>“The team explained every step clearly and completed the rooftop system on time.”</blockquote><strong>Solar customer</strong><small>Andhra Pradesh</small></article><a class="review-link" href="https://www.google.com/search?q=SLN+Solar+Energy" target="_blank" rel="noreferrer">Review us on Google <span>↗</span></a></div></section>
-
-    <section class="faq-section section-pad">
-      <div class="section-heading"><div><div class="section-kicker">10 — Clear your doubts</div><h2>Frequently<br><em>asked questions.</em></h2></div><p>Everything you need to know about solar energy and our solutions.</p></div>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <button class="faq-toggle" aria-expanded="false">
-            <span>Significant Cost Savings</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content" hidden>
-            <p>Our solar systems reduce your electricity bills by up to 80%. Once installed, you get free electricity for 30+ years. Through net metering, you can earn credits for excess energy sent to the grid, providing additional savings and income.</p>
-          </div>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1500<span>+</span></div>
+                    <p>Total Systems Installed</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">35<span>+ MW</span></div>
+                    <p>Total Megawatts</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8000<span>+</span></div>
+                    <p>Customer Quoted</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">80<span>%</span></div>
+                    <p>Electricity Savings</p>
+                </div>
+            </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-toggle" aria-expanded="false">
-            <span>Government Subsidies & Incentives</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content" hidden>
-            <p>You can avail government subsidies through PM Surya Ghar and other state schemes. We assist with all documentation and the subsidy application process. With subsidies up to ₹78,000, your installation cost becomes significantly more affordable.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-toggle" aria-expanded="false">
-            <span>Energy Independence & Security</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content" hidden>
-            <p>Solar energy makes you independent from grid price fluctuations and power outages. With hybrid or off-grid systems, you gain complete energy autonomy. Our solutions provide reliable power generation for decades with minimal maintenance.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-toggle" aria-expanded="false">
-            <span>Increases Property Value & Low Maintenance</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content" hidden>
-            <p>Solar installations increase your property value significantly. Our systems are designed for minimum maintenance with 30-year panel warranties and 10-year inverter warranties. We provide complete after-sales support for years to come.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-toggle" aria-expanded="false">
-            <span>Why choose SLN Solar Energy?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content" hidden>
-            <p>We're rooted in Andhra Pradesh with 25+ years of experience. Our team provides end-to-end care from site survey to after-sales support. We use only high-quality components from trusted brands like Tata, Waaree, Solax, and RenewSys with full transparency in our recommendations.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-toggle" aria-expanded="false">
-            <span>What about cloudy days?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content" hidden>
-            <p>Modern solar panels generate electricity even on cloudy days, though at reduced capacity. We design systems based on your annual consumption patterns. Hybrid systems with battery storage provide power even during poor weather conditions.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section class="pm-section section-pad" id="pm-surya-ghar"><div class="pm-badge">PM SURYA GHAR</div><div class="pm-grid"><div><h2>Make your rooftop<br><em>work harder.</em></h2><p>We help homeowners understand the PM Surya Ghar process, from eligibility and vendor selection to installation, inspection, net meter and subsidy documentation.</p><a class="button button-dark" href="#contact">Talk to an expert <span>↗</span></a></div><div class="pm-checklist"><div><strong>01</strong><span>Check eligibility & rooftop requirements</span></div><div><strong>02</strong><span>Choose an approved vendor</span></div><div><strong>03</strong><span>Install, inspect and connect your net meter</span></div><div><strong>04</strong><span>Complete the applicable subsidy process</span></div><small>Government eligibility, subsidy figures and lending options can change. We will guide you using the latest official information available at the time of your application.</small></div></div></section>
+    <!-- Recent Projects -->
+    <section class="projects">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Recent Projects</p>
+                <h2>Solar installations that power everyday life</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-image project-one"></div>
+                    <div class="project-body">
+                        <h3>Residential Rooftop</h3>
+                        <p>Custom solar array design for homes with high daytime consumption and long-term savings.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image project-two"></div>
+                    <div class="project-body">
+                        <h3>Commercial Solar</h3>
+                        <p>Efficient rooftop systems helping businesses reduce utility costs and carbon footprint.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image project-three"></div>
+                    <div class="project-body">
+                        <h3>Industrial Plant</h3>
+                        <p>Large-scale installations for factories and industrial facilities with stable energy output.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-    <section class="contact section-pad" id="contact"><div class="contact-copy"><div class="section-kicker">07 — Let’s talk power</div><h2>Ready to make<br>the <em>switch?</em></h2><p>Tell us a little about your project. We’ll get back to you with the right next step.</p></div><form class="contact-form" id="quote-form"><label>Your name<input name="name" required placeholder="Name"></label><label>Phone number<input name="phone" type="tel" required placeholder="83093 23693"></label><label>Project type<select name="type"><option>Residential solar</option><option>Commercial solar</option><option>Agricultural solar</option><option>Industrial solar</option></select></label><label>Message<textarea name="message" rows="3" placeholder="Tell us about your site or monthly bill"></textarea></label><button class="button button-light" type="submit">Send enquiry <span>↗</span></button><p class="form-status" role="status"></p></form></section>
-  </main>
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Clear Your Doubts on Solar</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>01. Significant Cost Savings</h3>
+                    <p>Reduces electricity bills by up to 80%. Once installed, solar power provides free electricity for 30+ years. Net metering allows you to earn credits for excess energy sent to the grid.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>02. Government Subsidies & Incentives</h3>
+                    <p>Avail government subsidies up to ₹78,000 and tax benefits on solar installations. Various schemes available at national and state levels.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>03. Energy Independence & Security</h3>
+                    <p>Generate your own power and reduce dependency on grid electricity. Enjoy stable energy costs and protection against electricity price hikes.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>04. Increases Property Value</h3>
+                    <p>Solar installations increase your property value by 3-4%. Requires minimal maintenance and has a long lifespan of 25-30 years.</p>
+                </div>
+            </div>
+            <div class="faq-cta">
+                <a href="faq.html" class="btn btn-primary">See More FAQs</a>
+            </div>
+        </div>
+    </section>
 
-  <footer class="site-footer"><div class="footer-top"><a class="brand footer-brand" href="#top"><span class="brand-mark">SLN</span><span><strong>SLN SOLAR</strong><small>ENERGY</small></span></a><p>Powering homes<br>with divine energy.</p><div><a href="tel:8309323693">83093 23693</a><a href="mailto:hello@slnsolarenergy.in">hello@slnsolarenergy.in</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> SLN Solar Energy</span><span>Andhra Pradesh · India</span><a href="#top">Back to top ↑</a></div></footer>
-  <div class="modal" id="quote-modal" aria-hidden="true"><div class="modal-card"><button class="modal-close" aria-label="Close quote form">×</button><div class="section-kicker">A brighter next step</div><h2>Let’s talk about<br><em>your solar plan.</em></h2><p>Share your number and our team will call you back.</p><a class="button button-dark" href="#contact">Open enquiry form <span>↗</span></a></div></div>
-  <script src="script.js"></script>
+    <!-- Blog Section -->
+    <section class="blog">
+        <div class="container">
+            <h2>Latest News & Blog</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-meta">APR 04</div>
+                    <h3>Ms. Ayushi Podder Has Made India Proud With Her Outstanding Shooting Talent</h3>
+                    <p>Explore how solar energy is making an impact across India...</p>
+                    <a href="blog.html">Read More →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta">DEC 15</div>
+                    <h3>Hear Straight From Olympian Vijay Veer Singh Siddhu, India's Leading Shooter</h3>
+                    <p>An inspiring story about renewable energy and sustainability...</p>
+                    <a href="blog.html">Read More →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta">OCT 20</div>
+                    <h3>Challenges While Designing New Solar Structures</h3>
+                    <p>Learn about the technical challenges and solutions in solar installation...</p>
+                    <a href="blog.html">Read More →</a>
+                </article>
+            </div>
+            <div class="blog-cta">
+                <a href="blog.html" class="btn btn-primary">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Go Solar?</h2>
+            <p>Start your journey to sustainable energy today</p>
+            <a href="contact.html" class="btn btn-primary btn-large">Get Your Free Solar Assessment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html?type=residential">Residential</a></li>
+                        <li><a href="services.html?type=commercial">Commercial</a></li>
+                        <li><a href="services.html?type=industrial">Industrial</a></li>
+                        <li><a href="services.html?type=water-heaters">Water Heaters</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="products.html">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p>Kurnool Head Office<br>Ananthapur Branch Office</p>
+                    <p><a href="tel:8309323693">📞 8309323693</a></p>
+                    <p><a href="mailto:slnsolarenergy3@gmail.com">📧 slnsolarenergy3@gmail.com</a></p>
+                    <p><a href="https://www.slnsolarenergy.com">🌐 www.slnsolarenergy.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SLN Solar. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

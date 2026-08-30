@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - SLN Solar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="page-how">
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logo.png" alt="SLN Solar Energy" class="site-logo">
+                    </a>
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="about.html">About Us</a>
+                            <a href="how-it-works.html">How It Works</a>
+                            <a href="faq.html">FAQ</a>
+                            <a href="testimonials.html">Testimonials</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="services.html?type=residential">Residential Solar</a>
+                            <a href="services.html?type=commercial">Commercial Solar</a>
+                            <a href="services.html?type=industrial">Industrial Solar</a>
+                            <a href="services.html?type=water-heaters">Solar Water Heaters</a>
+                            <a href="services.html?type=pumps">Solar Water Pumps</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Products <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html?brand=tata">Tata Solar Panels</a>
+                            <a href="products.html?brand=waree">Waree Energies</a>
+                            <a href="products.html?type=inverters">Inverters</a>
+                            <a href="products.html?type=batteries">Solar Batteries</a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="contact.html" class="nav-link btn-primary">Get Free Quote</a>
+                </nav>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>How Solar Works</h1>
+                <p class="hero-subtitle">Understanding the complete solar energy process</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section style="padding: 80px 0; background: white;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Step 1 -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 60px;">
+                    <div>
+                        <div style="background: var(--primary-color); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; margin-bottom: 20px;">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h3 style="font-size: 24px; margin-bottom: 15px;">Step 1: Sunlight Absorption</h3>
+                        <p>Solar panels contain photovoltaic (PV) cells that absorb sunlight and convert it into direct current (DC) electricity. The more sunlight, the more electricity is generated.</p>
+                    </div>
+                    <div class="process-visual process-sun"></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 60px;">
+                    <div class="process-visual process-inverter"></div>
+                    <div>
+                        <div style="background: var(--primary-color); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; margin-bottom: 20px;">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 style="font-size: 24px; margin-bottom: 15px;">Step 2: Inverter Conversion</h3>
+                        <p>The DC electricity generated by solar panels is sent to an inverter, which converts it to alternating current (AC) electricity that can be used by household appliances and the grid.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 60px;">
+                    <div>
+                        <div style="background: var(--primary-color); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; margin-bottom: 20px;">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3 style="font-size: 24px; margin-bottom: 15px;">Step 3: Usage & Distribution</h3>
+                        <p>The AC electricity powers your home. Any excess electricity not used by your household can be sent to the electrical grid, earning you credits through net metering.</p>
+                    </div>
+                    <div class="process-visual process-home"></div>
+                </div>
+
+                <!-- Step 4 -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div class="process-visual process-monitor"></div>
+                    <div>
+                        <div style="background: var(--primary-color); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; margin-bottom: 20px;">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3 style="font-size: 24px; margin-bottom: 15px;">Step 4: Savings & Monitoring</h3>
+                        <p>Monitor your solar system's performance through our mobile app or web portal. Watch your energy bills decrease and savings increase month after month.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Diagram -->
+    <section style="padding: 80px 0; background: #f9f9f9;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Solar System Components</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>Solar Panels</h3>
+                    <p>Convert sunlight into electricity using photovoltaic technology. Size ranges from 3kW to 10kW+ depending on your needs.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Inverter</h3>
+                    <p>Converts DC electricity to AC electricity that powers your home and can be exported to the grid.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>Battery (Optional)</h3>
+                    <p>Stores excess solar energy for use during night or cloudy periods. Not required with net metering.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-gauge-high"></i>
+                    </div>
+                    <h3>Monitoring System</h3>
+                    <p>Tracks real-time energy production and consumption with mobile app and web portal access.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Net Meter</h3>
+                    <p>Measures electricity sent to and received from the grid. Enables net metering benefits.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safety Switches</h3>
+                    <p>Protection devices including DC isolator, AC breaker, and earthing system for safe operation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section style="padding: 80px 0; background: white;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Why Choose Solar?</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 8px;">
+                    <h4 style="margin-bottom: 15px;"><i class="fas fa-money-bill-wave" style="color: var(--primary-color); margin-right: 10px;"></i>Significant Savings</h4>
+                    <p>Reduce your electricity bills by 50-80% and increase your property value.</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 8px;">
+                    <h4 style="margin-bottom: 15px;"><i class="fas fa-leaf" style="color: var(--primary-color); margin-right: 10px;"></i>Environment Friendly</h4>
+                    <p>Reduce your carbon footprint and contribute to a cleaner environment.</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 8px;">
+                    <h4 style="margin-bottom: 15px;"><i class="fas fa-sun" style="color: var(--primary-color); margin-right: 10px;"></i>Energy Independence</h4>
+                    <p>Generate your own electricity and reduce dependence on grid power.</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 8px;">
+                    <h4 style="margin-bottom: 15px;"><i class="fas fa-clock" style="color: var(--primary-color); margin-right: 10px;"></i>Long Lifespan</h4>
+                    <p>Solar panels last 25-30 years with minimal maintenance and degradation.</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 8px;">
+                    <h4 style="margin-bottom: 15px;"><i class="fas fa-percentage" style="color: var(--primary-color); margin-right: 10px;"></i>Government Subsidies</h4>
+                    <p>Avail PM Surya Ghar subsidy up to ₹78,000 and additional tax benefits.</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 8px;">
+                    <h4 style="margin-bottom: 15px;"><i class="fas fa-chart-line" style="color: var(--primary-color); margin-right: 10px;"></i>ROI in 5-7 Years</h4>
+                    <p>Recoup your investment quickly and enjoy free electricity for decades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Harness Solar Energy?</h2>
+            <p>Get a free assessment and discover your solar potential today</p>
+            <a href="contact.html" class="btn btn-primary btn-large">Get Free Assessment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html?type=residential">Residential</a></li>
+                        <li><a href="services.html?type=commercial">Commercial</a></li>
+                        <li><a href="services.html?type=industrial">Industrial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="products.html">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><a href="tel:8309323693">📞 8309323693</a></p>
+                    <p><a href="mailto:slnsolarenergy3@gmail.com">📧 slnsolarenergy3@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SLN Solar. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SLN Solar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="page-contact">
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logo.png" alt="SLN Solar Energy" class="site-logo">
+                    </a>
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="about.html">About Us</a>
+                            <a href="how-it-works.html">How It Works</a>
+                            <a href="faq.html">FAQ</a>
+                            <a href="testimonials.html">Testimonials</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="services.html?type=residential">Residential Solar</a>
+                            <a href="services.html?type=commercial">Commercial Solar</a>
+                            <a href="services.html?type=industrial">Industrial Solar</a>
+                            <a href="services.html?type=water-heaters">Solar Water Heaters</a>
+                            <a href="services.html?type=pumps">Solar Water Pumps</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Products <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html?brand=tata">Tata Solar Panels</a>
+                            <a href="products.html?brand=waree">Waree Energies</a>
+                            <a href="products.html?type=inverters">Inverters</a>
+                            <a href="products.html?type=batteries">Solar Batteries</a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="contact.html" class="nav-link btn-primary">Get Free Quote</a>
+                </nav>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p class="hero-subtitle">Get in touch with our solar experts today</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section style="padding: 80px 0; background: white;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <!-- Contact Form -->
+                <div>
+                    <h2 style="margin-bottom: 30px;">Send us a Message</h2>
+                    <form onsubmit="handleFormSubmit(event)" style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Name*</label>
+                            <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 16px;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Email*</label>
+                            <input type="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 16px;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Phone*</label>
+                            <input type="tel" name="phone" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 16px;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Address</label>
+                            <input type="text" name="address" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 16px;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">System Type</label>
+                            <select name="system" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 16px;">
+                                <option value="">Select System Type</option>
+                                <option value="residential">Residential Solar</option>
+                                <option value="commercial">Commercial Solar</option>
+                                <option value="water-heater">Solar Water Heater</option>
+                                <option value="water-pump">Solar Water Pump</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Message</label>
+                            <textarea name="message" rows="5" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 16px; font-family: inherit;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="padding: 14px 30px; font-size: 16px;">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h2 style="margin-bottom: 30px;">Get In Touch</h2>
+                    
+                    <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; margin-bottom: 30px;">
+                        <h4 style="margin-bottom: 15px;">📍 Office Address</h4>
+                        <p>Back side Sri Suryanarayana Temple,<br>Gooty Road Petrol Pump,<br>Kurnool-518002, Andhra Pradesh, India</p>
+                    </div>
+
+                    <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; margin-bottom: 30px;">
+                        <h4 style="margin-bottom: 15px;">📞 Phone Numbers</h4>
+                        <p><a href="tel:8309323693" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">8309323693</a></p>
+                    </div>
+
+                    <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; margin-bottom: 30px;">
+                        <h4 style="margin-bottom: 15px;">📧 Email</h4>
+                        <p><a href="mailto:slnsolarenergy3@gmail.com" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">slnsolarenergy3@gmail.com</a></p>
+                    </div>
+
+                    <div style="background: #f9f9f9; padding: 30px; border-radius: 8px;">
+                        <h4 style="margin-bottom: 15px;">🏢 Branch Office</h4>
+                        <p>H.No:17-1-197, Venugopal Nagar,<br>Gooty Road, Nandhini Restaurant back side,<br>Ananthapur-515001, Andhra Pradesh, India</p>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <h4 style="margin-bottom: 15px;">Follow Us</h4>
+                        <div style="display: flex; gap: 20px;">
+                            <a href="#" style="font-size: 24px; color: var(--primary-color);"><i class="fab fa-facebook"></i></a>
+                            <a href="#" style="font-size: 24px; color: var(--primary-color);"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="font-size: 24px; color: var(--primary-color);"><i class="fab fa-youtube"></i></a>
+                            <a href="#" style="font-size: 24px; color: var(--primary-color);"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Placeholder) -->
+    <section style="padding: 60px 0; background: white; border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Our Location</h2>
+            <div class="contact-map" style="display: flex; align-items: center; justify-content: center; color: white;">
+                <div style="text-align: center; background: rgba(0,0,0,0.18); padding: 24px 30px; border-radius: 12px; backdrop-filter: blur(2px);">
+                    <i class="fas fa-map-marker-alt" style="font-size: 64px; margin-bottom: 20px;"></i>
+                    <p style="font-size: 20px; font-weight: 700;">SLN Solar Energy</p>
+                    <p>Kurnool Head Office and Ananthapur Branch Office</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Go Solar?</h2>
+            <p>Our solar experts are ready to help you start your journey</p>
+            <a href="contact.html" class="btn btn-primary btn-large">Schedule Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html?type=residential">Residential</a></li>
+                        <li><a href="services.html?type=commercial">Commercial</a></li>
+                        <li><a href="services.html?type=industrial">Industrial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="products.html">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><a href="tel:8309323693">📞 8309323693</a></p>
+                    <p><a href="mailto:slnsolarenergy3@gmail.com">📧 slnsolarenergy3@gmail.com</a></p>
+                    <p><a href="https://www.slnsolarenergy.com">🌐 www.slnsolarenergy.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SLN Solar. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

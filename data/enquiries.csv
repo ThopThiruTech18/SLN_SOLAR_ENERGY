@@ -1,3 +1,7 @@
-submitted_at,name,phone,project_type,message
-"2026-08-22T15:24:03.723Z","Golla thirumalesh","9703146255","Residential solar","Solar Energy"
-"2026-08-22T15:37:05.863Z","Sai","97464644615","Industrial solar",""
+submitted_at,name,phone,project_type,message,email,address
+"2026-08-22T15:24:03.723Z","Golla thirumalesh","9703146255","Residential solar","Solar Energy","",""
+"2026-08-22T15:37:05.863Z","Sai","97464644615","Industrial solar","","",""
+"2026-08-30T08:18:43.427Z","CSV Test User","9000000000","residential","API CSV storage test","csv-test@example.com","Test Address"
+"2026-08-30T08:19:00.755Z","CSV Schema Test","9111111111","commercial","Seven column CSV test","schema-test@example.com","Schema Test Address"
+"2026-08-30T08:45:27.579Z","Submit Test","9222222222","residential","Submit button test","submit-test@example.com","Browser test"
+"2026-08-30T08:46:42.979Z","THIRU G.","994646464","commercial","","gollathirumalesh7755@gmail.com","KRISHNADODDI VILLAGE,C.BELAGAL MANADAL,KURNOOL DISTRICT"

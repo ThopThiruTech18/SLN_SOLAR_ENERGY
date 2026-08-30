@@ -7,14 +7,19 @@ const port = Number(process.env.PORT) || 3000;
 const root = __dirname;
 const dataDirectory = path.join(root, 'data');
 const csvPath = path.join(dataDirectory, 'enquiries.csv');
-const csvHeader = 'submitted_at,name,phone,project_type,message\n';
+const csvHeader = 'submitted_at,name,phone,project_type,message,email,address\n';
 
 function csvEscape(value) {
   return `"${String(value ?? '').replace(/"/g, '""')}"`;
 }
 
 function send(response, statusCode, body, contentType = 'application/json') {
-  response.writeHead(statusCode, { 'Content-Type': `${contentType}; charset=utf-8` });
+  response.writeHead(statusCode, {
+    'Content-Type': `${contentType}; charset=utf-8`,
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type'
+  });
   response.end(body);
 }
 
@@ -49,7 +54,7 @@ function saveEnquiry(request, response) {
 
       fs.mkdirSync(dataDirectory, { recursive: true });
       if (!fs.existsSync(csvPath)) fs.writeFileSync(csvPath, csvHeader, 'utf8');
-      const row = [new Date().toISOString(), enquiry.name, enquiry.phone, enquiry.type, enquiry.message]
+      const row = [new Date().toISOString(), enquiry.name, enquiry.phone, enquiry.system || enquiry.type, enquiry.message, enquiry.email, enquiry.address]
         .map(csvEscape)
         .join(',') + '\n';
       fs.appendFileSync(csvPath, row, 'utf8');
@@ -61,6 +66,10 @@ function saveEnquiry(request, response) {
 }
 
 const server = http.createServer((request, response) => {
+  if (request.method === 'OPTIONS') {
+    send(response, 204, '');
+    return;
+  }
   if (request.method === 'POST' && request.url === '/api/enquiries') {
     saveEnquiry(request, response);
     return;
